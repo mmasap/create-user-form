@@ -3,8 +3,8 @@ const fs = require('fs');
 const qs = require('querystring');
 const ejs = require('ejs');
 
-const indexHtml = fs.readFileSync('./index.html', 'utf8');
-const createUserEjs = fs.readFileSync('./create-user.ejs', 'utf8');
+const indexHtml = fs.readFileSync('./template/index.html', 'utf8');
+const createUserEjs = fs.readFileSync('./template/create-user.ejs', 'utf8');
 
 const server = http.createServer((req, res) => {
   if (req.url === '/' && req.method === 'GET') {
